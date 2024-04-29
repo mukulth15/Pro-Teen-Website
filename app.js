@@ -50,11 +50,7 @@ app.use('/payments', require('./routers/payment'));
 app.use('/allPayments', require('./routers/allPayments'));
 
 app.use('*', (req, res) => {
-    res.status(200).json({
-        success: true,
-        message: "Welcome to PRO-TEEN",
-        data: "Welcome to PRO-TEEN"
-    });
+    res.redirect('/home')
 });
 
 // Connect to MongoDB
